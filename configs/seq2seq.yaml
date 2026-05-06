@@ -1,0 +1,12 @@
+extends: "configs/base.yaml"
+experiment_name: "seq2seq_baseline"
+
+train:
+  epochs: 8
+  batch_size: 64
+  lr: 0.0005
+
+decode:
+  beam_size: 1
+  temperature: 1.0
+  top_k: 0

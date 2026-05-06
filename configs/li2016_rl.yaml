@@ -1,0 +1,26 @@
+extends: "configs/base.yaml"
+experiment_name: "li2016_rl"
+
+rl:
+  max_sim_turns: 5
+  max_decode_len: 24
+  candidates_per_turn: 5
+  lambda1: 0.25
+  lambda2: 0.25
+  lambda3: 0.5
+  gamma: 1.0
+  entropy_coef: 0.01
+  dull_responses:
+    - "i don't know"
+    - "i don't know what you are talking about"
+    - "i have no idea"
+    - "i don't care"
+    - "i am not sure"
+    - "you don't know"
+    - "whatever"
+    - "i don't understand"
+
+train:
+  epochs: 6
+  batch_size: 16
+  lr: 0.0001
